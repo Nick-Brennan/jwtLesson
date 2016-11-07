@@ -20,6 +20,8 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 //TEST ENDPOINT
 app.get('/hw', ctrl.testF);
+app.get('/', ctrl.home);
+app.post('/subscribe', ctrl.subscribe)
 
 http.listen(process.env.PORT || 3000, function(){
   console.log("Application listening on port: " + (process.env.PORT || 3000));
