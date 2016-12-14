@@ -25,7 +25,7 @@ $(function(){
         console.log(this);
         console.log(myHeaders.getAllResponseHeaders());
         var returnedHeaders = myHeaders.getAllResponseHeaders();
-        console.log(returnedHeaders.match("bearerToken:\s(.*)"));
+        console.log(myHeaders.getResponseHeader('bearerToken'));
         // console.log("Bearer Token: ", returnedToken);
       },
       error: function (request, textStatus, errorThrown) {
